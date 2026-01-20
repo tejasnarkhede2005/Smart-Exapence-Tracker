@@ -3,7 +3,7 @@
 
 ### 2. Mermaid Chart Code (Architecture Flow)
 
-```mermaid
+```
 graph TD
     A[User] -->|Opens browser| B[Streamlit App<br>app.py]
 
