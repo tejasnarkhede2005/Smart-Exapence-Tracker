@@ -153,5 +153,6 @@ elif page == "📥 Export":
 # Footer
 st.markdown("---")
 
-st.caption("Built with ❤️ using Streamlit • SQLite • Pandas • Matplotlib")
+st.caption("Built By Tejas")
+
 
