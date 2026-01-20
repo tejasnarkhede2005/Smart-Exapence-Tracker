@@ -6,16 +6,23 @@ Track daily expenses, view monthly summaries, analyze spending with orange bar c
 [Expense Tracker Demo: ([https://via.placeholder.com/800x400.png?text=Smart+Expense+Tracker+Screenshot](https://smart-expence-tracker.streamlit.app/))  
 
 
-```mermaid
+```
 graph TD
-    U[User] -->|Opens App| A[Streamlit App<br>app.py]
-    A --> S[Sidebar Navigation<br>Dashboard | Add Expense | Summary | Charts | Export]
+    U[User] --> A[Streamlit App<br/>app.py]
+
+    A --> S[Sidebar Navigation<br/>Dashboard<br/>Add Expense<br/>Summary<br/>Charts<br/>Export]
+
     S --> AE[Add Expense]
-    AE --> DBF[database.py<br>add_expense()]
-    DBF --> DB[(SQLite DB<br>expenses.db)]
-    S --> VS[View Summary / Charts]
-    DB --> EM[expense_manager.py<br>get_monthly_summary()]
+    AE --> DBF[database.py<br/>add_expense()]
+    DBF --> DB[(SQLite DB<br/>expenses.db)]
+
+    S --> VS[View Summary & Charts]
+    DB --> EM[expense_manager.py<br/>get_monthly_summary()]
     EM --> DF[Pandas DataFrame]
+    DF --> CH[Streamlit Charts]
+
+    S --> EX[Export Data]
+    DF --> CSV[Pandas to_csv()<br/>Download CSV]
     DF --> CH[Streamlit Charts]
     S --> EX[Export Data]
     DF --> CSV[Pandas to_csv()<br>Download CSV]
