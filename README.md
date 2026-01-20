@@ -23,7 +23,7 @@ graph TD
 
     DB --> EM[expense_manager.py get_monthly_summary]
     EM --> DF[Pandas DataFrame]
-```
 
     DF --> CH[Charts]
     DF --> CSV[CSV Export]
+```
